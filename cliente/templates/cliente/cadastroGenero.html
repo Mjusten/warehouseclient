@@ -1,0 +1,36 @@
+
+{% extends 'cliente/base.html' %}
+
+{% load crispy_forms_tags %}
+
+    {% block title %}
+        Meu Sistema - Cadastro de Gênero
+    {% endblock title %}
+
+
+    {% block conteudo %} 
+        {% if sucesso %}
+            <div class="alert alert-sucess">{{ sucesso }}</div>
+        {% endif %}
+        
+        {% if form %}
+        <form action="{% url 'cliente:cadastro' %}" method="POST">
+            
+            <div class="row">
+                <div class="col-6" >
+                    {{ form.nm_genero|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6" >
+                    {{ form.sg_genero|as_crispy_field }}
+                </div>
+            </div>
+
+            
+            <input class="btn btn-primary" type="submit" value ="Vai" />
+
+        </form>
+        {% endif %}
+    {% endblock conteudo %}
+

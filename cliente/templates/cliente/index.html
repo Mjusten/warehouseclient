@@ -1,0 +1,11 @@
+
+{% extends 'cliente/base.html' %}
+
+    {% block conteudo %}
+        {% if erro %}
+            {% include 'cliente/erro.html' with erro=erro %}          
+        {% endif %}
+        <p> Sou o index </p>
+    {% endblock conteudo %}
+
+              

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+        {% block title %}    
+            Meu Sistema 
+        {% endblock title %}
+        </title>
+
+        <!-- Inserir link bootstrap -->
+
+        {% block css %}
+        {% endblock css %}
+
+        <!-- Inserir link javascript e jquery-->
+
+        {% block js %}
+        {% endblock js %}       
+
+    </head> 
+    <body>
+        
+        <div class="container">
+            {% block conteudo %}
+            {% endblock conteudo %}
+        </div>
+
+    </body>
+</html>

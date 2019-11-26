@@ -1,0 +1,22 @@
+{% extends 'cliente/base.html' %}
+
+    {% block title %}
+        Meu sistema - Busca Gênero
+    {% endblock title %}
+
+    {% block conteudo %}
+        {% if generos %}
+            <table>
+                <tr>
+                    <td> Gênero </td>
+                    <td> Abreviatura </td>
+                </tr>
+                    {% for genero in generos %}
+                        <tr>
+                            <td>{{ genero.nm_genero }}</td> 
+                            <td>{{ genero.sg_genero }}</td>
+                        </tr>
+                    {% endfor %}
+            </table>
+        {% endif %}
+    {% endblock conteudo %}  
